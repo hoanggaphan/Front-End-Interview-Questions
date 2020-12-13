@@ -234,7 +234,7 @@
 	- **width: 0; height: 0**. Làm cho phần tử không chiếm bất kỳ không gian nào trên màn hình, dẫn đến không hiển thị phần tử đó.
 	- **position: absolute; left: -99999px**. Đặt nó bên ngoài màn hình.
 	- **text-indent: -9999px**. Điều này chỉ hoạt động khi văn bản nằm trong phần tử block.
-	- Tôi sẽ sử dụng** position: ʻabsolute`**, vì nó có ít cảnh báo nhất và hoạt động với hầu hết các yếu tố.
+	- Tôi sẽ sử dụng** position: 'absolute'**, vì nó có ít cảnh báo nhất và hoạt động với hầu hết các yếu tố.
 
 - Bạn đã bao giờ sử dụng hệ thống lưới chưa, và nếu có, bạn thích cái nào hơn?
 	Tôi thích hê thống flex-box, grid. Nó đã được sử dụng cho Bootstrap trong nhiều năm và đã chứng minh sự tồn tại của mình.
@@ -258,10 +258,11 @@
 	```html
 	<style>
 	.page-break {
-			display: none;
-			page-break-before: luôn luôn; 
+		display: none;
+		page-break-before: luôn luôn; 
 	}
 	</style>
+
 	Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Fusce eu felis. Curabitur ngồi amet magna. Nullam aliquet. Aliquam ut diam ... 
 	<div class = "page-break"> </div> 
 	Lorem ipsum dolor sit amet, consectetuer adipiscing elit ....
