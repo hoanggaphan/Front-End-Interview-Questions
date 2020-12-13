@@ -211,8 +211,7 @@
 		- Link tham khảo: [https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Block_formatting_context](https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Block_formatting_context "https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Block_formatting_context").
 		- Code mẫu: <iframe height="265" style="width: 100%;" scrolling="no" title="clearfix" src="https://codepen.io/hoanggaphan/embed/preview/rNLLOqr?height=265&theme-id=dark&default-tab=result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href='https://codepen.io/hoanggaphan/pen/rNLLOqr'>clearfix</a> by hoanggaphan
-  (<a href='https://codepen.io/hoanggaphan'>@hoanggaphan</a>) on <a href='https://codepen.io'>CodePen</a>.
-</iframe>
+  (<a href='https://codepen.io/hoanggaphan'>@hoanggaphan</a>) on <a href='https://codepen.io'>CodePen</a>.</iframe>
 
 - Giải thích về CSS sprites, và làm thế nào để bạn thực hiện chúng trên một trang web.
 	Sprites là một hình ảnh lớn được tạo ra bằng cách gộp nhiều ảnh nhỏ lại với nhau. Để hiển thị được một ảnh nhỏ từ Sprite Image, thay vì sử dụng qua thẻ `<img />` thì ta phải sử dụng thuộc tính **background** kết hớp với **background-position** để xác định vị trí chính xác của bức ảnh cần, Chúng ta có thể tạo ra **image sprites** bằng cách sử dụng 1 số tool như **photoshop** hoặc các trình edit online như:  [https://www.toptal.com/developers/css/sprite-generator](https://www.toptal.com/developers/css/sprite-generator "https://www.toptal.com/developers/css/sprite-generator").
