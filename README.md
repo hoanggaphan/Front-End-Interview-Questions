@@ -359,18 +359,18 @@
 		4. **Elements and pseudo-elements** - đây là Selector có kiểu chung chung nhất nên mức độ ưu tiên thấp nhất.
 	**Note**: 1 số trường hợp custom lại css bên thư viện thứ 3, css selector ở mức cao nhất ta phải sử dụng đến `!important` để ghi đè. Tôi thường viết **Css** ở mức thấp để có thể dễ dàng ghi đè
 	- Ví dụ 1:
-```css
+	```css
 	#heading {
-			color: orange;
-			color: grey;
+		color: orange;
+		color: grey;
 	}
 
 	.heading {
-			color: red;
+		color: red;
 	}
 
 	h1 {
-			color: blue;
+		color: blue;
 	}
 	```
 	Ở ví dụ 1 sẽ apply `color: grey` vì **IDs selector** có mức độ ưu tiên cao nhất trong trường hợp này. Vậy tại sao ko phải `color: orange`? Câu trả lời là khi có cùng mức độ ưu tiên thì nó sẽ xét đến thứ tự xuất hiện, CSS nào được viết sau thì sẽ ghi đè CSS được viết trước.
