@@ -16,7 +16,7 @@
 <a id="general_questions"></a>
 ### 1. Các câu hỏi chung
 
-- Bạn đã học được gì trong ngày hôm qua / tuần này?
+- Bạn đã học được gì trong ngày hôm qua / tuần này?\
 	...
 
 - Điều gì về lập trình làm bạn hứng thú?
