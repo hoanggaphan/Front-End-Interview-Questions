@@ -377,12 +377,12 @@
 	```css
 	//custom.css
 	h1 {
-			color: red;
+		color: red;
 	}
 
 	//custom2.css
 	h1 {
-		 color: blue;
+		color: blue;
 	}
 	```
 	Ở ví dụ 2 sẽ apply `color: blue` vì **h1** trong **custom.css** và **h1** trong **custom2.css** có cùng 1 mức độ nhưng `color: blue` khai báo sau `color: red` nên n1 sẽ ghi đè.
@@ -481,86 +481,87 @@
 
 	- ### Strict mode
 	Nếu ta dùng **strict mode** thì **this** trong các function sẽ trả về **undefined** (trừ method).
-		```javascript
-		"use strict"
+	```javascript
+	"use strict"
 
-		function func() {
+	function func() {
+		return this;
+	}
+
+	console.log(func()); // this sẽ trả về undefine
+	```
+
+	```javascript
+	"use strict"
+
+	const obj = {
+		method: function() {
 			return this;
 		}
+	};
 
-		console.log(func()); // this sẽ trả về undefine
-		```
-
-		```javascript
-		"use strict"
-
-		const obj = {
-			method: function() {
-				return this;
-			}
-		};
-
-		console.log(obj.method()); // this của method vẫn sẽ trả về obj
-		```
+	console.log(obj.method()); // this của method vẫn sẽ trả về obj
+	```
 
 	- ### Arrow function
 	Giá trị của **this** trong một **arrow function** sẽ được kế thừa từ **this** của **function/method**, nơi mà **arrow function** đó được khai báo chứ không còn trả trả về object gần nhất chứa nó nữa.
-		```javascript
-		const obj = {
-			methoddd: function() {
-				console.log(this); // trả về obj
+	```javascript
+	const obj = {
+		methoddd: function() {
+			console.log(this); // trả về obj
 
-				const arrowFunc = () => {
-					console.log(this);
-			   };
+			const arrowFunc = () => {
+				console.log(this);
+				};
 
-				/*
-					arrowFunc đc khai báo trong phương thức
-					methoddd nên 'this' của arrowFunc sẽ kế thừa
-					'this' của methoddd và trả về obj
-				*/
-				arrowFunc();
-			}
-		};
+			/*
+				arrowFunc đc khai báo trong phương thức
+				methoddd nên 'this' của arrowFunc sẽ kế thừa
+				'this' của methoddd và trả về obj
+			*/
+			arrowFunc();
+		}
+	};
 
-		console.log(obj.methoddd());
-		```
+	console.log(obj.methoddd());
+	```
 
-		```javascript
-		const arrowFunc = () => {
-			console.log(this); // this của arrowFunc lần này sẽ là window
-		};
+	```javascript
+	const arrowFunc = () => {
+		console.log(this); // this của arrowFunc lần này sẽ là window
+	};
 
-		const obj = {
-			methoddd: function() {
-				console.log(this); // trả về obj
+	const obj = {
+		methoddd: function() {
+			console.log(this); // trả về obj
 
-				/*
-					'this' sẽ trả về object window do arrowFunc không
-					còn được khai báo bên trong methoddd nữa
-				*/
-				arrowFunc();
-			}
-		};
+			/*
+				'this' sẽ trả về object window do arrowFunc không
+				còn được khai báo bên trong methoddd nữa
+			*/
+			arrowFunc();
+		}
+	};
 
-		console.log(obj.methoddd());
-		```
+	console.log(obj.methoddd());
+	```
 
 	**Chú ý**: **this** của arrow function sẽ luôn trả về window nếu nó không được khai báo bên trong bất kỳ một **function** nào, nên **arrow function** không được sử dụng để làm **constructor function** hay **method** của một **object** được khởi tạo bằng **object initializer**.
-		```javascript
-		// dùng arrow function làm constructor function
-		const Human = (name, age) => {
-			this.name = name;
-			this.age = age;
-		};
+	```javascript
+	// dùng arrow function làm constructor function
+	const Human = (name, age) => {
+		this.name = name;
+		this.age = age;
+	};
 
-		const man = new Human('Hunq', 20); // Uncaught TypeError: Human is not a constructor
+	const man = new Human('Hunq', 20); // Uncaught TypeError: Human is not a constructor
 
-		```
-		```javascript
-		/*
-			dùng arrow function làm method của một object
-			được khởi tạo bằng Object Inintializer
+	```
+
+	```javascript
+	/*
+		dùng arrow function làm method của một object
+		được khởi tạo bằng Object Inintializer
 	*/
 		const obj = {
 			method: () => this
@@ -572,7 +573,7 @@
 			độc lập (không nằm trong function nào)
 	*/
 		console.log(obj.method());
-		```
+	```
 
 - Giải thích cách mà prototypal inheritance hoạt động
 	- Mọi thứ trong javascript đều là một **Object**, ngay cả khi tạo **Class** thông qua **Constructor Function**. Đây là cách javascript lập trình trên **Class** giống như các ngôn ngữ lập trình hướng đội tượng truyền thống khác, nơi chúng sử dụng từ khóa **Class** và **Inheritance**.
