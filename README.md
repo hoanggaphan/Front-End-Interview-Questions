@@ -13,7 +13,7 @@
 8. [Các câu hỏi về việc viết code](#coding_questions)
 9. [Các câu hỏi vui](#usage)
 
-<a name="general_questions"></a>
+<a id="general_questions"></a>
 ### 1. Các câu hỏi chung
 
 - Bạn đã học được gì trong ngày hôm qua / tuần này?
@@ -41,8 +41,8 @@
 	Gom chung lại thành 1 file css.
 
 - Bạn có thể trình bày sự khác nhau giữa progressive enhancement và graceful degradation không?
-	- [Progressive Enhancement](https://developer.mozilla.org/en-US/docs/Glossary/Progressive_enhancement "Progressive Enhancement") là 1 triết lí thiết kế mang lại trải nghiệm tốt nhất cho các người dùng sử dụng trình duyệt hiện đại.
-	- [Graceful degradation](https://developer.mozilla.org/en-US/docs/Glossary/Graceful_degradation "Graceful degradation") là 1 triết lí thiết kế rơi vào 1 trải nghiệm không tốt nhưng vẫn cung cấp nội dung và chức năng cho các trình duyệt cũ.
+	- <a href="https://developer.mozilla.org/en-US/docs/Glossary/Progressive_enhancement" target="__blank" rel="noopener noreferrer">Progressive Enhancement</a> là 1 triết lí thiết kế mang lại trải nghiệm tốt nhất cho các người dùng sử dụng trình duyệt hiện đại.
+	- <a href="https://developer.mozilla.org/en-US/docs/Glossary/Graceful_degradation" target="__blank" rel="noopener noreferrer">Graceful degradation</a> là 1 triết lí thiết kế rơi vào 1 trải nghiệm không tốt nhưng vẫn cung cấp nội dung và chức năng cho các trình duyệt cũ.
 
 - Bạn sẽ tối ưu các tài nguyên (assets/resources) của một website như thế nào?
 	- Tối ưu hóa kích thước hình ảnh.
@@ -70,7 +70,7 @@
 	Chuyển qua xài nút Tab hoặc config lại nút space cho giống nút tab của họ.
 
 - Trình bày cách bạn sẽ làm một trang slideshow đơn giản.
- 	Sử dụng thẻ label và input radio, input đặt id và đặt trước các slide element, label làm navigation bar và đặt id giống input, để khi click vào label nó sẽ check input và sử dụng css để hiển thị các slide sau ô input, đây là [code mẫu](https://codepen.io/hoanggaphan/pen/QWEymEM "code mẫu").
+ 	Sử dụng thẻ label và input radio, input đặt id và đặt trước các slide element, label làm navigation bar và đặt id giống input, để khi click vào label nó sẽ check input và sử dụng css để hiển thị các slide sau ô input, đây là <a href="https://codepen.io/hoanggaphan/pen/QWEymEM" target="__blank" rel="noopener noreferrer">code mẫu</a>.
 
 - Nếu bạn có thể chuyên sâu về một công nghệ (technology) trong năm nay thì nó sẽ là công nghệ gì?
 	ReactJS / NextJS
@@ -95,7 +95,7 @@
 - CORS là từ viết tắt của cái gì và nó đề cập đến vấn đề nào?
 	**CORS** viết tắt của từ **Cross-origin resource sharing**, là một cơ chế cho phép nhiều tài nguyên khác nhau (fonts, Javascript, v.v…) của một trang web có thể được truy vấn từ domain khác với domain của trang đó.
 
-<a name="html_questions"></a>
+<a id="html_questions"></a>
 ### 2. Các câu hỏi về HTML:
 
 - Một doctype làm cái gì?
@@ -169,8 +169,8 @@
 - Trước đây bạn đã bao giờ sử dụng những ngôn ngữ template HTML nào khác chưa?
 	Đã sử dụng qua **Pug**, **EJS** trong nodejs, template HTML hỗ trợ 1 số chức năng như kế thừa layout, include block, conditional, ... trực tiếp trên HTML.
 
-<a name="css_questions"></a>
-### 1. Các câu hỏi về CSS:
+<a id="css_questions"></a>
+### 3. Các câu hỏi về CSS:
 
 - Điểm khác biệt giữa class và ID trong CSS là gì?
 	Class có thể sử dụng cho nhiều tag, còn id chỉ gán cho 1 tag duy nhất
@@ -208,10 +208,8 @@
 	- Sử dụng `display: flow-root;` thay vì `overflow: auto;` giống như overflow tạo ra một **BFC** nhưng không gây ra bất kì tác dụng phụ nào.
 	- Tạo 1 thẻ `<div>` có thuộc tính css `clear: both` đặt vào cuối trong phần tử cha chứa phần tử float.
 	- Còn 1 cách được sử dụng khá phổ biến là sử dụng class Pseudo và để thêm thuộc tính `clear: both`
-		- Link tham khảo: [https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Block_formatting_context](https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Block_formatting_context "https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Block_formatting_context").
-		- Code mẫu: <iframe height="265" style="width: 100%;" scrolling="no" title="clearfix" src="https://codepen.io/hoanggaphan/embed/preview/rNLLOqr?height=265&theme-id=dark&default-tab=result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
-  See the Pen <a href='https://codepen.io/hoanggaphan/pen/rNLLOqr'>clearfix</a> by hoanggaphan
-  (<a href='https://codepen.io/hoanggaphan'>@hoanggaphan</a>) on <a href='https://codepen.io'>CodePen</a>.</iframe>
+		- Link tham khảo: <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Block_formatting_context" target="__blank" rel="noopener noreferrer">https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Block_formatting_context</a>.
+		- <a href="https://codepen.io/hoanggaphan/pen/rNLLOqr" target="__blank" rel="noopener noreferrer">Code mẫu</a>.
 
 - Giải thích về CSS sprites, và làm thế nào để bạn thực hiện chúng trên một trang web.
 	Sprites là một hình ảnh lớn được tạo ra bằng cách gộp nhiều ảnh nhỏ lại với nhau. Để hiển thị được một ảnh nhỏ từ Sprite Image, thay vì sử dụng qua thẻ `<img />` thì ta phải sử dụng thuộc tính **background** kết hớp với **background-position** để xác định vị trí chính xác của bức ảnh cần, Chúng ta có thể tạo ra **image sprites** bằng cách sử dụng 1 số tool như **photoshop** hoặc các trình edit online như:  [https://www.toptal.com/developers/css/sprite-generator](https://www.toptal.com/developers/css/sprite-generator "https://www.toptal.com/developers/css/sprite-generator").
@@ -266,7 +264,9 @@
 	<div class = "page-break"> </div> 
 	Lorem ipsum dolor sit amet, consectetuer adipiscing elit ....
 	```
-	- Tham khảo: [https://davidwalsh.name/optimizing-osystem-print-css](https://davidwalsh.name/optimizing-osystem-print-css "https://davidwalsh.name/optimizing-osystem-print-css")
+	- Tham khảo: 
+		- <a href="https://davidwalsh.name/optimizing-structure-print-css" target="__blank" rel="noopener noreferrer">https://davidwalsh.name/optimizing-structure-print-css</a>.
+		- <a href="https://davidwalsh.name/optimizing-content-print-css" target="__blank" rel="noopener noreferrer">https://davidwalsh.name/optimizing-content-print-css</a>.
 
 - Một số“bí quyết”để viết CSS hiệu quả là gì?
 	- Khai bao css theo 1 khối thứ tự (**Declaration order**)
@@ -274,11 +274,10 @@
 	- Đặt **@media** gần với css có liên quan không nên tách ra 1 file css khác
 	- Học thêm **OOCSS (Object Oriented CSS)** và **BEM**, **SASS**
 	- Link tham khảo style guide:
-		- [https://codeguide.co/](https://codeguide.co/ "https://codeguide.co/")
-		- [https://airbnb.io/javascript/](https://airbnb.io/javascript/ "https://airbnb.io/javascript/")
-		- [https://google.github.io/styleguide/htmlcssguide.html](https://google.github.io/styleguide/htmlcssguide.html "https://google.github.io/styleguide/htmlcssguide.html")
-	- Link tham khảo đầy đủ về bô quy tắc **BEM, OOCSS, SMACSS, SUITCSS, Atomic**:
-		[http://getbem.com/introduction/](http://getbem.com/introduction/ "http://getbem.com/introduction/")
+		- <a href="https://codeguide.co/" target="__blank" rel="noopener noreferrer">https://codeguide.co/</a>
+		- <a href="https://airbnb.io/javascript/" target="__blank" rel="noopener noreferrer">https://airbnb.io/javascript/</a>
+		- <a href="https://google.github.io/styleguide/htmlcssguide.html" target="__blank" rel="noopener noreferrer">https://google.github.io/styleguide/htmlcssguide.html</a>
+	- Link tham khảo đầy đủ về bô quy tắc **BEM, OOCSS, SMACSS, SUITCSS, Atomic**: <a href="http://getbem.com/introduction/" target="__blank" rel="noopener noreferrer">http://getbem.com/introduction/</a>
 
 - Ưu điểm / nhược điểm của việc sử dụng bộ tiền xử lý CSS là gì?
 	- **Ưu điểm:**
@@ -410,8 +409,8 @@
 	- **absolute positioning** ngược lại sẽ kich hoat trình duyệt **reflow** hoặc **repaint**, ngoài ra nó được tính toán trên **CPU** nên về mặt hiệu suất sẽ kém hơn **translate**.
 	- **Note**: Khi sử dụng `translate()` phần tử vẫn chiếm không gian ban đầu của nó (giống `position: relative`), không giống như `position: absolute` không gian nó chiếm sẽ  thay đổi theo vị trí mà nó được đặt.
 
-<a name="js_questions"></a>
-### 3. Các câu hỏi về JS:
+<a id="js_questions"></a>
+### 4. Các câu hỏi về JS:
 
 - Giải thích về event delegation
 	- **Event delegation** cho phép bạn tránh thêm trình nghe sự kiện vào từng phần tử cụ thể của 1 danh sách các phần tử, thay vào đó trình nghe sự kiện được thêm vào phần tử cha mẹ chứa danh sách các phần tử đó, ví dụ ta có 1 `<ul>` chứa 1 danh sách các `</li>` thay vì đặt sự kiện **click** ở từng `<li>` ta có thể đặt tại phần tử `<ul>`.
@@ -579,8 +578,7 @@
 	- Mọi thứ trong javascript đều là một **Object**, ngay cả khi tạo **Class** thông qua **Constructor Function**. Đây là cách javascript lập trình trên **Class** giống như các ngôn ngữ lập trình hướng đội tượng truyền thống khác, nơi chúng sử dụng từ khóa **Class** và **Inheritance**.
 	- Phiên bản lập trình dựa trên **Class** trong javascript so với các ngôn ngữ lập trình truyền thống khác hoạt động cùng 1 khái niệm nhưng không hoạt động hoàn toàn giống nhau. Khác biệt về từ khóa, cú pháp và cách hoạt động.
 	- Vì vậy, ý tưởng cốt lõi của **Prototypal Inheritance** (kế thừa nguyên mẫu) là 1 object A có thể trỏ đến 1 object B và kế thừa tất cả thuộc tính của object B. Mục đính chính là cho phép nhiều **instance** (thể hiện) của 1 obejct chia sẻ những thuộc tính chung.
-	- Dưới đây là ví dụ:
-	<iframe height="286" style="width: 100%;" scrolling="no" title="learning prototypal inheritance" src="https://codepen.io/hoanggaphan/embed/preview/dyXWgBo?height=286&theme-id=dark&default-tab=result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true" />
+	- <a href="https://codepen.io/hoanggaphan/pen/dyXWgBo" target="__blank" rel="noopener noreferrer">Ví dụ về prototypal inheritance</a>.
 
 - Sự khác nhau giữa biến: **null**, **undefined** hoặc **undeclared**? 
 Bạn sẽ kiểm tra các trạng thái này như thế nào?
@@ -595,8 +593,7 @@ Bạn sẽ kiểm tra các trạng thái này như thế nào?
 	- **Hoạt động:**
 		- Sau khi **outer function** được thực thi và trả về giá trị, **closure** có thể vẫn còn chạy.
 		- **Closure** lưu trữ tham chiếu đến các variables của **outer function**. Vì vậy chúng ta luôn có thể truy cập để cập nhật các variables này.
-	- Dưới đây là ví dụ sử dụng **closure** với **IIFE**.
-	<iframe height="265" style="width: 100%;" scrolling="no" title="learning javascript closures" src="https://codepen.io/hoanggaphan/embed/preview/XWKPdEZ?height=265&theme-id=dark&default-tab=js" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true" />
+	- <a href="https://codepen.io/hoanggaphan/pen/XWKPdEZ" target="__blank" rel="noopener noreferrer">Ví dụ sử dụng **closure** với **IIFE**.</a>
 
 - Bạn sử dụng cấu trúc ngôn ngữ nào để lặp qua các thuộc tính của object và các array items?
 	**for...in** lặp qua thuộc tính object. **for**, **forEarch**, **map** lặp qua phần tử của array.
@@ -643,13 +640,11 @@ Bạn sẽ kiểm tra các trạng thái này như thế nào?
 	- **Function Declaration** tải trước khi thực thi bất kì mã nào trong Javascript, **Function Expression** chỉ tải khi trình biên dịch đi đến dòng mã đó.
 
 - Bạn có thể giải thích **Function.call** và **Function.apply** làm gì? Sự khác biệt đáng chú ý giữa hai là gì?
-	- Việc gọi 1 **function** với **.call()** hoặc **.apply** sẽ trỏ 1 **object** đến **function** được gọi với **object** là tham số đầu tiên. Sự khác biệt ở đây là **.call()** cho phép truyền vào nhiều tham số, còn **.apply** chỉ chấp nhận tham số thứ 2 là 1 mảng, ví dụ:
-	- <iframe height="265" style="width: 100%;" scrolling="no" title="learning JavaScript's .apply and .call" src="https://codepen.io/hoanggaphan/embed/preview/GRqYOyZ?height=265&theme-id=dark&default-tab=js,result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true"/>
+	- Việc gọi 1 **function** với **.call()** hoặc **.apply** sẽ trỏ 1 **object** đến **function** được gọi với **object** là tham số đầu tiên. Sự khác biệt ở đây là **.call()** cho phép truyền vào nhiều tham số, còn **.apply** chỉ chấp nhận tham số thứ 2 là 1 mảng, <a href="https://codepen.io/hoanggaphan/pen/GRqYOyZ" target="__blank" rel="noopener noreferrer">ví dụ</a>.
 
 - Giải thích Function.prototype.bind ?
 	- **.bind()** là phương thức tạo ra 1 hàm mới, với đối số đầu tiên là 1 **object**, và các tham số theo sau có thể có hoặc không.
-	- **.bind()** hoạt động giống như **.call()**, điểm khác biệt là **.bind()**  không gọi hàm trực tiếp mà nó sẽ trả về một hàm mới để gọi sau, còn **.call()** sẽ gọi hàm trực tiếp.
-	- <iframe height="265" style="width: 100%;" scrolling="no" title="Bind vs Call" src="https://codepen.io/hoanggaphan/embed/preview/JjKejGa?height=265&theme-id=dark&default-tab=js,result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true" />
+	- **.bind()** hoạt động giống như **.call()**, điểm khác biệt là **.bind()**  không gọi hàm trực tiếp mà nó sẽ trả về một hàm mới để gọi sau, còn **.call()** sẽ gọi hàm trực tiếp, <a href="https://codepen.io/hoanggaphan/pen/JjKejGa" target="__blank" rel="noopener noreferrer">ví dụ</a>.
 
 - Sự khác biệt giữa **feature detection**, **feature inference** và **UA string** là gì?
 	-  **feature detection**: kiểm tra xem 1 tính năng có hỗ trợ trên trình duyệt bằng cách chạy các đoạn code khác nhau tùy thuộc vào việc **có** hay **không**. Điều này cho phép trình duyệt luôn cung cấp trải nghiệm hoạt động tốt thay vì gặp sự cố. Ví dụ:
@@ -752,11 +747,11 @@ Bạn sẽ kiểm tra các trạng thái này như thế nào?
 	```javascript
 	var parent = document.querySelector('#parent');
 	var child = document.querySelector('#child');
-	
+
 	parent.addEventListener('click', function(){
 		console.log("Parent clicked");
 	}, true);
-	
+
 	child.addEventListener('click', function(){
 		console.log("Child clicked");
 	});
@@ -780,13 +775,13 @@ Bạn sẽ kiểm tra các trạng thái này như thế nào?
 - Giải thích same-origin policy trong JavaScript
 	- **Same-origin policy** hạn chế các **tệp (script**) từ trang web thực hiện trên trang của bạn. 1 cuộc tấn công như thế này được gọi là **Cross Site Scripting (XSS)**.
 	 - 2 URL có cùng **origin** nếu như: **protocol** (http or https), **host** và **port** giống nhau.
-	- Ví dụ từ [MDN - Same-origin policy:](https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy)
+	- Ví dụ từ <a href="https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy" target="__blank" rel="noopener noreferrer">MDN - Same-origin policy:</a>
 		So sánh `http://store.company.com/dir/page.html` với bảng dưới.
-		<a href="https://i.ibb.co/rGtP3T2/same-origin.png" target="__blank"><img src="https://i.ibb.co/rGtP3T2/same-origin.png" height="155" alt="same-origin"></a>
+		<a href="https://i.ibb.co/rGtP3T2/same-origin.png" target="__blank" rel="noopener noreferrer"><img src="https://i.ibb.co/rGtP3T2/same-origin.png" height="155" alt="same-origin"></a>
 
 - Tại sao gọi là **Ternary Operator**, từ **"Ternary"** biểu thị điều gì?
 	- Trước hết hãy trả lời cho **Ternary** biểu thị điều gì?
-	- Theo [Wikipedia](https://en.wikipedia.org/wiki/Ternary_operation) từ **Ternary** bắt nguồn từ cách thiết lập từ **n-ary**. Ví dụ: un**ary**, bin**ary**, tern**ary** lần lượt là toán tử bậc 1, 2 và 3. Tất cả những điều này gọi chung là toán hạng (toán hạng **ternary**), phần tiền tố trong tên của chúng liệt kê số lượng đầu vào mà toán hạng chấp nhận.
+	- Theo <a href="https://en.wikipedia.org/wiki/Ternary_operation" target="__blank" rel="noopener noreferrer">Wikipedia</a> từ **Ternary** bắt nguồn từ cách thiết lập từ **n-ary**. Ví dụ: un**ary**, bin**ary**, tern**ary** lần lượt là toán tử bậc 1, 2 và 3. Tất cả những điều này gọi chung là toán hạng (toán hạng **ternary**), phần tiền tố trong tên của chúng liệt kê số lượng đầu vào mà toán hạng chấp nhận.
 	- Toán hạng un**ary** nhận 1 đối số, ví dụ: `-1`, với `-` là toán hạng, và **1** là đối số.
 	- Toán hạng bin**ary** nhận 2 đối số, ví dụ: `2 - 1`, với `-` là toán hạng và **2**, **1** là các đối số.
 	- Vậy toán hạng tern**ary** nhận 3 đối số.
@@ -1080,7 +1075,7 @@ Bạn sẽ kiểm tra các trạng thái này như thế nào?
 
 	setTimeout(batman.logName.bind(batman), 1000); // trả về 'Batman'
 	```
-	Đoạn mã **setTimeout()** trả về **undefined** là do [phương thức bị tách ra khỏi đối tượng](https://dmitripavlutin.com/gentle-explanation-of-this-in-javascript/#32-pitfall-separating-method-from-its-object). nên **this** lúc này sẽ là window hoặc undefine trong **strict mode**, để khắc phục ta đã dùng **.bind()**. Ngoài ra ta có thể sử dụng **Arrow function** để khắc phục, mã trên sửa lại như sau.
+	Đoạn mã **setTimeout()** trả về **undefined** là do <a href="https://dmitripavlutin.com/gentle-explanation-of-this-in-javascript/#32-pitfall-separating-method-from-its-object" target="__blank" rel="noopener noreferrer">phương thức bị tách ra khỏi đối tượng</a>. nên **this** lúc này sẽ là window hoặc undefine trong **strict mode**, để khắc phục ta đã dùng **.bind()**. Ngoài ra ta có thể sử dụng **Arrow function** để khắc phục, mã trên sửa lại như sau.
 	```javascript
 	class Hero {
 		constructor(heroName) {
@@ -1297,7 +1292,7 @@ Ví dụ về **Rest**:
 	}
 	```
 
-<a name="testing_questions"></a>
+<a id="testing_questions"></a>
 ### 5. Các câu hỏi về Testing
 
 - Vài điểm lợi và bất lợi trong việc kiểm thử code của bạn là gì?
@@ -1321,7 +1316,7 @@ Ví dụ về **Rest**:
 **Code Style Linting tool** không phải công cụ **debug** nhưng có thể được sử dụng hiệu quả trong quá trình gở lỗi để tìm ra những lỗi khó bắt gặp.
 1 số tool như: ESLint, CSS Lint, W3C, CleanCSS, ...
 
-<a name="performance_questions"></a>
+<a id="performance_questions"></a>
 ### 6. Các câu hỏi về Performance
 
 - Bạn sẽ sử dụng công cụ nào để tìm lỗi hiệu suất trong mã của mình ?
@@ -1338,7 +1333,7 @@ Chrome DevTools
 **Painting**: Đây là quá trình điền vào các pixel. Nó liên quan đến việc vẽ ra các phần tử trên nhiều lớp.
 **Compositing**: Trình duyệt vẽ các lớp khác nhau lên màn hình theo đúng thứ tự để trang hiển thị chính xác
 
-<a name="network_questions"></a>
+<a id="network_questions"></a>
 ### 7. Các câu hỏi về Network
 - Theo truyền thống, tại sao việc cung cấp các tài nguyên của trang web từ nhiều tên miền khác nhau là việc có lợi hơn ?
 	Trình duyệt giới hạn số lượng kết nối đang hoạt động trên mỗi miền. Để cho phép tải xuống đồng thời nội dung vượt quá giới hạn đó, tính năng phân tách miền (**domain sharding**) sẽ chia nội dung trên nhiều miền phụ. Khi nhiều miền được sử dụng để phân phát nội dung, các trình duyệt có thể tải xuống đồng thời nhiều tài nguyên hơn, dẫn đến thời gian tải trang nhanh hơn và cải thiện trải nghiệm người dùng.
@@ -1393,14 +1388,14 @@ Chrome DevTools
 		- Ta vẫn có 1 server chính (origin server), 1 hệ thống các server phụ chứa dữ liệu (edge server). Những file tĩnh như ảnh, video, CSS, JS sẽ được lưu trữ tại các CDN này.
 		- Với CDN, thay vì kết nối trực tiếp tới server chính, client sẽ kết nối tới server gần nhất để lấy dữ liệu, cải thiện tốc độ tải.
 	- Lợi ích ?
-		- **Tăng bảo mật**: Ta có thể [cài đặt SSL](https://toidicodedao.com/2016/10/04/bao-mat-cua-giao-thuc-http/) edge server trong CDN để tăng tính bảo mật cho hệ thống.
-		- **Chống DDOS**: Một số [CDN provider như Cloudflare](https://www.cloudflare.com/cdn/) còn đi kèm luôn dịch vụ chống DDOS. Các CDN này có khả năng chịu tải cao, có sẵn bộ lọc để chống DDOS trước khi những request này tới được server chính.
-		- **Caching, tiết kiệm băng thông**: Thông thường, người ta lưu trữ những file tĩnh như ảnh, css … trên CDN. Tuy nhiên, một số CDN có thể dùng để [cache kết quả từ server](https://toidicodedao.com/2017/08/01/thiet-ke-he-thong-trieu-nguoi-dung-high-scalability/) (dynamic caching).
+		- **Tăng bảo mật**: Ta có thể <a href="https://toidicodedao.com/2016/10/04/bao-mat-cua-giao-thuc-http/" target="__blank" rel="noopener noreferrer">cài đặt SSL</a> edge server trong CDN để tăng tính bảo mật cho hệ thống.
+		- **Chống DDOS**: Một số <a href="https://www.cloudflare.com/cdn/" target="__blank" rel="noopener noreferrer">CDN provider như Cloudflare</a> còn đi kèm luôn dịch vụ chống DDOS. Các CDN này có khả năng chịu tải cao, có sẵn bộ lọc để chống DDOS trước khi những request này tới được server chính.
+		- **Caching, tiết kiệm băng thông**: Thông thường, người ta lưu trữ những file tĩnh như ảnh, css … trên CDN. Tuy nhiên, một số CDN có thể dùng để <a href="https://toidicodedao.com/2017/08/01/thiet-ke-he-thong-trieu-nguoi-dung-high-scalability/" target="__blank" rel="noopener noreferrer">cache kết quả từ server</a> (dynamic caching).
 		- Thay vì truy cập và lấy dữ liệu đến server chính (origin server), người dùng lấy dữ liệu từ cache của CDN, nhanh và tiết kiệm băng thông hơn nhiều.
 		- **Tăng tính ổn định của hệ thống**: Khi hệ thống chỉ hoạt động dựa trên 1 server, nếu server đó tèo đồng nghĩa với toàn bộ hệ thống di tong.
 		- Với CDN, ta có nhiều server nên nếu một server nào đó có bị sập, người dùng vẫn có thể truy cập được dữ liệu trên server khác của hệ thống CDN.
 
-<a name="coding_questions"></a>
+<a id="coding_questions"></a>
 ### 8. Các câu hỏi về việc viết code
 
 - Question: What is the value of foo?
@@ -1409,7 +1404,7 @@ Chrome DevTools
 
 - Question: What will be the output of the code below?
 	`console.log(0.1 + 0.2 == 0.3);`
-	=> **false** Nguyên nhân là do cách chúng được lưu trữ trong phần cứng. Nếu mún biết tại sao [xem ở đây](https://floating-point-gui.de/basic/).
+	=> **false** Nguyên nhân là do cách chúng được lưu trữ trong phần cứng. Nếu mún biết tại sao <a href="https://floating-point-gui.de/basic/" target="__blank" rel="noopener noreferrer">xem ở đây</a>.
 
 - Question: How would you make this work?
 	```javascript
@@ -1466,7 +1461,7 @@ foo.x = foo = {n: 2};
 	```
 	=> Kết quả là **Undefined**, giải thích:
 	- Toán tử gán được thực hiện từ phải sang trái. Do đó câu lệnh trên có thể được viết lại như sau: `foo.x = (foo = {n: 2})`.
-	- [Theo thông số kỹ thuật](http://www.ecma-international.org/ecma-262/6.0/index.html#sec-assignment-operators-runtime-semantics-evaluation) phía bên trái của biễu thức được đánh giá đầu tiên, mặc dù toán tử gán được thực hiện từ phải sang trái.
+	- <a href="http://www.ecma-international.org/ecma-262/6.0/index.html#sec-assignment-operators-runtime-semantics-evaluation" target="__blank" rel="noopener noreferrer">Theo thông số kỹ thuật</a> phía bên trái của biễu thức được đánh giá đầu tiên, mặc dù toán tử gán được thực hiện từ phải sang trái.
 	- Ta gọi **foo.x** là **L.H.E** (Left Hand Expression) và **(foo = {n: 2})**  là **R.H.E**
 		- Đánh giá **L.H.E** để xác định nơi giá trị của **R.H.E** sẽ được gán cho. Lúc này **foo** của **foo.x** đang giữ tham chiếu đến **{n: 1}**.
 		- Đánh giá **R.H.E** để nhận giá trị sẽ được gán. Lúc này **R.H.E** lại là 1 biểu thức gán, vì vậy nó được đánh giá cùng 1 cách trên.
@@ -1526,7 +1521,7 @@ foo.x = foo = {n: 2};
 		Giá trị trả về của chuỗi **promise** này là giá trị đã được **resolve** (hoặc trả về) của hàm `doSomethingElse()`.
 		Mã tương tự: `  doSomething().then((first_argument) => doSomethingElse);`
 
-<a name="fun_questions"></a>
+<a id="fun_questions"></a>
 ### 9. Các câu hỏi về việc viết code
 - Gần đây bạn đã làm việc với những dự án thú vị nào?
 - Vài điều bạn thích về các công cụ dành cho nhà phát triển mà bạn sử dụng là gì?
