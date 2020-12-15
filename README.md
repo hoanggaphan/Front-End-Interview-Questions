@@ -16,10 +16,10 @@
 <a id="general_questions"></a>
 ### 1. Các câu hỏi chung
 
-- Bạn đã học được gì trong ngày hôm qua / tuần này?\
+1. Bạn đã học được gì trong ngày hôm qua / tuần này?\
 	...
 
-- Điều gì về lập trình làm bạn hứng thú?\
+2. Điều gì về lập trình làm bạn hứng thú?\
 	Tôi thích việc viết code để tạo ra các ứng dụng, lập trình rất khó, mà khó thì tôi lại càng thích.
 
 - Một thử thách về mặt kĩ thuật bạn đã trải qua gần đây là gì và bạn đã giải quyết nó như thế nào?\
