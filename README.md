@@ -1485,11 +1485,11 @@ Chrome DevTools
 	console.log('one');
 
 	setTimeout(function() {
-		console.log('two');
+	  console.log('two');
 	}, 0);
 
 	Promise.resolve().then(function() {
-		console.log('three');
+	  console.log('three');
 	})
 
 	console.log('four');
