@@ -1539,6 +1539,6 @@ Chrome DevTools
 - Những tính năng của Internet Explorer mà bạn thích là gì?
 - Bạn có thích dùng cà phê không?
 
-___
+---
 
-<a href="#top"><img src="arrow.png" alt="top" />Lên đầu trang</a>
+<img src="arrow.png" alt="top"><a href="#top">Lên đầu trang</a>
