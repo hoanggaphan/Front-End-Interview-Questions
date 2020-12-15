@@ -2,6 +2,7 @@
 
 ## Nguồn <a href="https://h5bp.org/Front-end-Developer-Interview-Questions" target="_blank" rel="noopener noreferrer">h5bp.org</a>
 
+<a id="top"></a>
 ## Mục lục
 1. [Các câu hỏi chung](#general_questions)
 2. [Các câu hỏi về HTML](#html_questions)
@@ -1538,6 +1539,6 @@ Chrome DevTools
 - Những tính năng của Internet Explorer mà bạn thích là gì?
 - Bạn có thích dùng cà phê không?
 
-***
+___
 
-Lên đầu trang
+<a href="#top">Lên đầu trang</a>
