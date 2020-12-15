@@ -244,26 +244,26 @@
 
 - Làm cách nào để bạn tối ưu hóa các trang web của mình để in?
 	- Tạo css để in hoặc sử dụng các truy vấn phương tiện.
-	```html
-	<!-- Main stylesheet on top -->
-	<link rel="stylesheet" href="/global.css" media="all" />
-	<!-- Print only, on bottom -->
-	<link rel="stylesheet" href="/print.css" media="print" />
-	```
+		```html
+		<!-- Main stylesheet on top -->
+		<link rel="stylesheet" href="/global.css" media="all" />
+		<!-- Print only, on bottom -->
+		<link rel="stylesheet" href="/print.css" media="print" />
+		```
 	- Đảm bảo đặt các kiểu không in bên trong **@media screen { ... }**.
 	- Thêm ngắt trang.
-	```html
-	<style>
-	.page-break {
-		display: none;
-		page-break-before: luôn luôn; 
-	}
-	</style>
+		```html
+		<style>
+		.page-break {
+		  display: none;
+		  page-break-before: luôn luôn; 
+		}
+		</style>
 
-	Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Fusce eu felis. Curabitur ngồi amet magna. Nullam aliquet. Aliquam ut diam ... 
-	<div class = "page-break"> </div> 
-	Lorem ipsum dolor sit amet, consectetuer adipiscing elit ....
-	```
+		Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Fusce eu felis. Curabitur ngồi amet magna. Nullam aliquet. Aliquam ut diam ... 
+		<div class = "page-break"> </div> 
+		Lorem ipsum dolor sit amet, consectetuer adipiscing elit ....
+		```
 	- Tham khảo: 
 		- <a href="https://davidwalsh.name/optimizing-structure-print-css" target="__blank" rel="noopener noreferrer">https://davidwalsh.name/optimizing-structure-print-css</a>.
 		- <a href="https://davidwalsh.name/optimizing-content-print-css" target="__blank" rel="noopener noreferrer">https://davidwalsh.name/optimizing-content-print-css</a>.
@@ -357,34 +357,35 @@
 		4. **Elements and pseudo-elements** - đây là Selector có kiểu chung chung nhất nên mức độ ưu tiên thấp nhất.
 	**Note**: 1 số trường hợp custom lại css bên thư viện thứ 3, css selector ở mức cao nhất ta phải sử dụng đến `!important` để ghi đè. Tôi thường viết **Css** ở mức thấp để có thể dễ dàng ghi đè
 	- Ví dụ 1:
-	```css
-	#heading {
-		color: orange;
-		color: grey;
-	}
+		```css
+		#heading {
+			color: orange;
+			color: grey;
+		}
 
-	.heading {
-		color: red;
-	}
+		.heading {
+			color: red;
+		}
 
-	h1 {
-		color: blue;
-	}
-	```
-	Ở ví dụ 1 sẽ apply `color: grey` vì **IDs selector** có mức độ ưu tiên cao nhất trong trường hợp này. Vậy tại sao ko phải `color: orange`? Câu trả lời là khi có cùng mức độ ưu tiên thì nó sẽ xét đến thứ tự xuất hiện, CSS nào được viết sau thì sẽ ghi đè CSS được viết trước.
+		h1 {
+			color: blue;
+		}
+		```
+
+		Ở ví dụ 1 sẽ apply `color: grey` vì **IDs selector** có mức độ ưu tiên cao nhất trong trường hợp này. Vậy tại sao ko phải `color: orange`? Câu trả lời là khi có cùng mức độ ưu tiên thì nó sẽ xét đến thứ tự xuất hiện, CSS nào được viết sau thì sẽ ghi đè CSS được viết trước.
 	- Ví dụ 2:
-	```css
-	//custom.css
-	h1 {
-		color: red;
-	}
+		```css
+		//custom.css
+		h1 {
+			color: red;
+		}
 
-	//custom2.css
-	h1 {
-		color: blue;
-	}
-	```
-	Ở ví dụ 2 sẽ apply `color: blue` vì **h1** trong **custom.css** và **h1** trong **custom2.css** có cùng 1 mức độ nhưng `color: blue` khai báo sau `color: red` nên n1 sẽ ghi đè.
+		//custom2.css
+		h1 {
+			color: blue;
+		}
+		```
+		Ở ví dụ 2 sẽ apply `color: blue` vì **h1** trong **custom.css** và **h1** trong **custom2.css** có cùng 1 mức độ nhưng `color: blue` khai báo sau `color: red` nên n1 sẽ ghi đè.
 
 - Những framework CSS nào bạn đã sử dụng trên máy của bạn, hoặc trong sản phẩm nào đó? Bạn sẽ thay đổi/cải tiến chúng như thế nào?\
 	**Bootstrap** - Chu kỳ phát hành chậm. Bootstrap 4 đã ở giai đoạn alpha được gần 2 năm. Tôi sẽ lược bớt và chỉ tải những phần cần xài như **Grid** của bootstrap để ko giảm tải trang.
@@ -415,21 +416,21 @@
 - Giải thích về event delegation
 	- **Event delegation** cho phép bạn tránh thêm trình nghe sự kiện vào từng phần tử cụ thể của 1 danh sách các phần tử, thay vào đó trình nghe sự kiện được thêm vào phần tử cha mẹ chứa danh sách các phần tử đó, ví dụ ta có 1 `<ul>` chứa 1 danh sách các `</li>` thay vì đặt sự kiện **click** ở từng `<li>` ta có thể đặt tại phần tử `<ul>`.
 	- Giả sử ta có 1 danh sách `<li>` khi click vào thẻ `<li>` sẽ in ra màn hình **console** id của thẻ đó:
-	```html
-	<ul id="parent-list">
-		<li id="post-1">Item 1</li>
-		<li id="post-2">Item 2</li>
-		<li id="post-3">Item 3</li>
-	</ul>
-	```
+		```html
+		<ul id="parent-list">
+		  <li id="post-1">Item 1</li>
+		  <li id="post-2">Item 2</li>
+		  <li id="post-3">Item 3</li>
+		</ul>
+		```
 	- Nếu ta thêm trình lắng nghe sự kiện **onclick** vào thẻ `<li>` để log ra id thì nó vẫn hoạt động tốt. Nhưng trường hợp thẻ `<li>` thường được thêm hoặc xóa khỏi danh sách thì sao? ta lại phải thêm hoặc xóa trình lắng nghe lại sự kiện, giải pháp tốt nhất là sủ dụng **Event delegation** cho thẻ `<ul>`.
-	 ```javascript
+		```javascript
 		document.getElementById("parent-list").addEventListener("click", (e) => {
 			if(e.target && e.target.nodeName == "LI") {
 				console.log(e.target.id);
 			}
 		});
-	```
+		```
 	- Đoạn mã trên kiểm tra thuộc tính đích của đối tượng sự kiện để có được tham chiếu đến nút được nhấp thực sự.
 
 - Giải thích cách mà **this** hoạt động trong JavaScript?\
@@ -441,7 +442,7 @@
 		console.log(this); // trả về window
 
 		function func() {
-			console.log(this);
+		  console.log(this);
 		}
 
 		func(); // trả về window
@@ -450,9 +451,9 @@
 		```javascript
 		// 'this' nằm bên trong một object
 		const obj = {
-			method: function() {
-				return this;
-			}
+		  method: function() {
+		    return this;
+		  }
 		};
 
 		console.log(obj.method()); // trả về obj
@@ -460,18 +461,18 @@
 
 		```javascript
 		/*
-			'this' nằm bên trong object được
-			khởi tạo từ Constructor Function
+		  'this' nằm bên trong object được
+		  khởi tạo từ Constructor Function
 		*/
 		function ConstFunc() {
-			return this;
+		  return this;
 		}
 
 		console.log(new ConstFunc()); // trả về obj vì từ khóa 'new' đã tạo ra 1 object
 		```
 
 	- ### This trong các Event
-	Tất cả mọi thứ trong **Javascript** đều là **object** và **DOM element** cũng không phải ngoại lệ. Chính vì vậy, **This** trong các event của một **DOM element** sẽ trả về chính element chứa nó.
+		Tất cả mọi thứ trong **Javascript** đều là **object** và **DOM element** cũng không phải ngoại lệ. Chính vì vậy, **This** trong các event của một **DOM element** sẽ trả về chính element chứa nó.
 		```javascript
 		document.getElementById("btn").onclick = function() {
 			console.log(this); // trả về Html Element Object
@@ -479,89 +480,89 @@
 		```
 
 	- ### Strict mode
-	Nếu ta dùng **strict mode** thì **this** trong các function sẽ trả về **undefined** (trừ method).
-	```javascript
-	"use strict"
+		Nếu ta dùng **strict mode** thì **this** trong các function sẽ trả về **undefined** (trừ method).
+		```javascript
+		"use strict"
 
-	function func() {
-		return this;
-	}
-
-	console.log(func()); // this sẽ trả về undefine
-	```
-
-	```javascript
-	"use strict"
-
-	const obj = {
-		method: function() {
+		function func() {
 			return this;
 		}
-	};
 
-	console.log(obj.method()); // this của method vẫn sẽ trả về obj
-	```
+		console.log(func()); // this sẽ trả về undefine
+		```
+
+		```javascript
+		"use strict"
+
+		const obj = {
+			method: function() {
+				return this;
+			}
+		};
+
+		console.log(obj.method()); // this của method vẫn sẽ trả về obj
+		```
 
 	- ### Arrow function
-	Giá trị của **this** trong một **arrow function** sẽ được kế thừa từ **this** của **function/method**, nơi mà **arrow function** đó được khai báo chứ không còn trả trả về object gần nhất chứa nó nữa.
-	```javascript
-	const obj = {
-		methoddd: function() {
-			console.log(this); // trả về obj
+		Giá trị của **this** trong một **arrow function** sẽ được kế thừa từ **this** của **function/method**, nơi mà **arrow function** đó được khai báo chứ không còn trả trả về object gần nhất chứa nó nữa.
+		```javascript
+		const obj = {
+			methoddd: function() {
+				console.log(this); // trả về obj
 
-			const arrowFunc = () => {
-				console.log(this);
+				const arrowFunc = () => {
+					console.log(this);
 				};
 
-			/*
-				arrowFunc đc khai báo trong phương thức
-				methoddd nên 'this' của arrowFunc sẽ kế thừa
-				'this' của methoddd và trả về obj
-			*/
-			arrowFunc();
-		}
-	};
+				/*
+					arrowFunc đc khai báo trong phương thức
+					methoddd nên 'this' của arrowFunc sẽ kế thừa
+					'this' của methoddd và trả về obj
+				*/
+				arrowFunc();
+			}
+		};
 
-	console.log(obj.methoddd());
-	```
+		console.log(obj.methoddd());
+		```
 
-	```javascript
-	const arrowFunc = () => {
-		console.log(this); // this của arrowFunc lần này sẽ là window
-	};
+		```javascript
+		const arrowFunc = () => {
+			console.log(this); // this của arrowFunc lần này sẽ là window
+		};
 
-	const obj = {
-		methoddd: function() {
-			console.log(this); // trả về obj
+		const obj = {
+			methoddd: function() {
+				console.log(this); // trả về obj
 
-			/*
-				'this' sẽ trả về object window do arrowFunc không
-				còn được khai báo bên trong methoddd nữa
-			*/
-			arrowFunc();
-		}
-	};
+				/*
+					'this' sẽ trả về object window do arrowFunc không
+					còn được khai báo bên trong methoddd nữa
+				*/
+				arrowFunc();
+			}
+		};
 
-	console.log(obj.methoddd());
-	```
+		console.log(obj.methoddd());
+		```
 
-	**Chú ý**: **this** của arrow function sẽ luôn trả về window nếu nó không được khai báo bên trong bất kỳ một **function** nào, nên **arrow function** không được sử dụng để làm **constructor function** hay **method** của một **object** được khởi tạo bằng **object initializer**.
-	```javascript
-	// dùng arrow function làm constructor function
-	const Human = (name, age) => {
-		this.name = name;
-		this.age = age;
-	};
+		**Chú ý**: **this** của arrow function sẽ luôn trả về window nếu nó không được khai báo bên trong bất kỳ một **function** nào, nên **arrow function** không được sử dụng để làm **constructor function** hay **method** của một **object** được khởi tạo bằng **object initializer**.
+		```javascript
+		// dùng arrow function làm constructor function
+		const Human = (name, age) => {
+			this.name = name;
+			this.age = age;
+		};
 
-	const man = new Human('Hunq', 20); // Uncaught TypeError: Human is not a constructor
+		const man = new Human('Hunq', 20); // Uncaught TypeError: Human is not a constructor
 
-	```
+		```
 
-	```javascript
-	/*
-		dùng arrow function làm method của một object
-		được khởi tạo bằng Object Inintializer
-	*/
+		```javascript
+		/*
+			dùng arrow function làm method của một object
+			được khởi tạo bằng Object Inintializer
+		*/
 		const obj = {
 			method: () => this
 		};
@@ -570,9 +571,9 @@
 			this của method sẽ trả về window
 			vì trên thực tế, method đang được khai báo
 			độc lập (không nằm trong function nào)
-	*/
+		*/
 		console.log(obj.method());
-	```
+		```
 
 - Giải thích cách mà prototypal inheritance hoạt động
 	- Mọi thứ trong javascript đều là một **Object**, ngay cả khi tạo **Class** thông qua **Constructor Function**. Đây là cách javascript lập trình trên **Class** giống như các ngôn ngữ lập trình hướng đội tượng truyền thống khác, nơi chúng sử dụng từ khóa **Class** và **Inheritance**.
@@ -613,8 +614,8 @@ Bạn sẽ kiểm tra các trạng thái này như thế nào?
 
 	// Làm thuộc tính của object
 	var obj = {
-		name: "anonymous",
-		anon: () => console.log("anonymous function")
+	  name: "anonymous",
+	  anon: () => console.log("anonymous function")
 	}
 
 	// Làm đối số của hàm khác
@@ -650,17 +651,17 @@ Bạn sẽ kiểm tra các trạng thái này như thế nào?
 	-  **feature detection**: kiểm tra xem 1 tính năng có hỗ trợ trên trình duyệt bằng cách chạy các đoạn code khác nhau tùy thuộc vào việc **có** hay **không**. Điều này cho phép trình duyệt luôn cung cấp trải nghiệm hoạt động tốt thay vì gặp sự cố. Ví dụ:
 		```javascript
 		if ("geolocation" in navigator) {
-			navigator.geolocation.getCurrentPosition(function(position) {
-				// hiển thị vị trí trên bản đồ, bằng cách sử dụng API Google Maps
-			});
+		  navigator.geolocation.getCurrentPosition(function(position) {
+		    // hiển thị vị trí trên bản đồ, bằng cách sử dụng API Google Maps
+		  });
 		} else {
-			// Cung cấp cho người dùng lựa chọn bản đồ tĩnh
+		  // Cung cấp cho người dùng lựa chọn bản đồ tĩnh
 		}
 		```
 	- **feature inference**: tương tự như **feature detection**, nhưng thay vì cung cấp code dự phòng khi tính năng không dc hỗ trợ, thì nó sẽ giả định rằng tính năng đó cũng sẽ tồn tại.
 		```javascript
 		if (document.getElementsByTagName) {
-			element = document.getElementById(id);
+		  element = document.getElementById(id);
 		}
 		// Điều này ko được khuyến khích. Thay vào đó nên sử dụng feature detection
 		```
@@ -691,7 +692,7 @@ Bạn sẽ kiểm tra các trạng thái này như thế nào?
 	```javascript
 	say_something('YOLO');
 	function say_something(a){
-		console.log(a);
+	  console.log(a);
 	}
 	```
 	Và kết quả trả về `'YOLO'`.
@@ -701,23 +702,23 @@ Bạn sẽ kiểm tra các trạng thái này như thế nào?
 	####HTML
 	```html
 	<div class="ancestor">
-		<div class="parent">
-			<button> Click me! </button>
-		</div>
+	  <div class="parent">
+	    <button> Click me! </button>
+	  </div>
 	</div>
 	```
 	####Javascript
 	```javascript
 	$( "button" ).click(function(event) {
-		console.log( "button was clicked!" );
+	  console.log( "button was clicked!" );
 	});
 	
 	$( ".parent" ).click(function(event) {
-		console.log( "child element was clicked!" );
+	  console.log( "child element was clicked!" );
 	});
 	
 	$( ".ancestor" ).click(function(event) {
-		console.log( "descendant element was clicked!" );
+	  console.log( "descendant element was clicked!" );
 	});
 	```
 	Khi người dùng nhấp vào nút, sự kiện bắt đầu từ **button** và đi ra ngoài cùng, do đó kết quả là **"button was clicked!"**. Sau đó **"child element was clicked!"** và cuối cùng **"descendant element was clicked!"**.
@@ -725,12 +726,12 @@ Bạn sẽ kiểm tra các trạng thái này như thế nào?
 	Nếu bạn chỉ muốn sự kiện kích hoạt trên chính phần tử đó mà ko ảnh hưởng đến các phần tử bên ngoài, tham khảo đoạn mã sau:
 	```javascript
 	$( "button" ).click(function(event) {
-		event.stopPropagation(); // <-- Dòng này
-		console.log( "button was clicked!" );
+	  event.stopPropagation(); // <-- Dòng này
+	  console.log( "button was clicked!" );
 	});
 
 	$( ".parent, .ancestor" ).click(function(event) {
-		console.log( "don't click me!" );
+	  console.log( "don't click me!" );
 	});
 	```
 	Bây giờ sự lan truyền đã dừng lại tại nút **button** và chỉ hiển thị kết quả **"button was clicked!"**.
@@ -740,7 +741,7 @@ Bạn sẽ kiểm tra các trạng thái này như thế nào?
 	####HTML
 	```html
 	<div id="parent">
-		<button id="child">Child</button>
+	  <button id="child">Child</button>
 	</div>
 	```
 	#### Javascript
@@ -749,11 +750,11 @@ Bạn sẽ kiểm tra các trạng thái này như thế nào?
 	var child = document.querySelector('#child');
 
 	parent.addEventListener('click', function(){
-		console.log("Parent clicked");
+	  console.log("Parent clicked");
 	}, true);
 
 	child.addEventListener('click', function(){
-		console.log("Child clicked");
+	  console.log("Child clicked");
 	});
 	```
 	Chúng ta phải dăt tham số thứ 3 của **addEventListener** thành true để kích hoạt **event capturing** của phần tử cha.
@@ -789,9 +790,9 @@ Bạn sẽ kiểm tra các trạng thái này như thế nào?
 	- Ví dụ:
 	```javascript
 	if (fooTrue) {
-			foo();
+	  foo();
 	} else {
-			bar();
+	  bar();
 	}
 	```
 	Viết lại với `?:`
@@ -840,7 +841,7 @@ Bạn sẽ kiểm tra các trạng thái này như thế nào?
 	- #### Ví dụ về Immutable object
 		```javascript
 		let pikachu = {
-			type: "electric"
+		  type: "electric"
 		};
 
 		Object.freeze(pikachu);
@@ -859,7 +860,7 @@ Bạn sẽ kiểm tra các trạng thái này như thế nào?
     - **Object.assign()**
   	```javascript
   	const pikachu = {
-  		type: "electric"
+  	  type: "electric"
   	};
 
   	const pikachuClone = Object.assign({}, pikachu); // Tạo bản sao mới
@@ -868,12 +869,12 @@ Bạn sẽ kiểm tra các trạng thái này như thế nào?
     - **Spread operator**
     ```javascript
     const pikachu = {
-    	type: "electric"
+      type: "electric"
     };
 
     const pikachuClone = {
-    	...pikachu,
-    	color: "yellow"
+      ...pikachu,
+      color: "yellow"
     }; // Tạo bản sao mới và thêm thuộc tính color
     ```
 
@@ -889,8 +890,8 @@ Bạn sẽ kiểm tra các trạng thái này như thế nào?
     const pokemons = ["pikachu", "mewtwo"];
 
     const pokemonsClone = [
-    	...pokemons,
-    	"deoxys"
+      ...pokemons,
+      "deoxys"
     ]; // Tạo bản sao mới và thêm "deoxys"
     ```
 
@@ -950,8 +951,8 @@ Bạn sẽ kiểm tra các trạng thái này như thế nào?
 		* @param {Number} y  - Toạ độ y.
 		*/
 		function City(name, x, y) {
-			this.name = name;
-			this.setLocation(x, y);
+		  this.name = name;
+		  this.setLocation(x, y);
 		}
 
 		/**
@@ -961,8 +962,8 @@ Bạn sẽ kiểm tra các trạng thái này như thế nào?
 		* @param {Number} - Toạ độ y.
 		*/
 		City.prototype.setLocation = function(x, y) {
-			this.x = x;
-			this.y = y;
+		  this.x = x;
+		  this.y = y;
 		};
 
 		/**
@@ -971,10 +972,10 @@ Bạn sẽ kiểm tra các trạng thái này như thế nào?
 		* @return {Object}
 		*/
 		City.prototype.getLocation = function() {
-			return {
-				x: this.x,
-				y: this.y
-			};
+		  return {
+	      x: this.x,
+		    y: this.y
+		  };
 		};
 
 		/**
@@ -983,7 +984,7 @@ Bạn sẽ kiểm tra các trạng thái này như thế nào?
 		* @return {String}
 		*/
 		City.prototype.getName = function() {
-			return 'City("' + this.name + '")';
+		  return 'City("' + this.name + '")';
 		};
 
 		const _city = new City('Hồ Chí Minh', 100, 200);
@@ -1004,42 +1005,42 @@ Bạn sẽ kiểm tra các trạng thái này như thế nào?
 		* @param {Number} y  - Toạ độ y.
 		*/
 		class City {
-			constructor(name, x, y) {
-				this.name = name;
-				this.setLocation(x, y);
-			}
+		  constructor(name, x, y) {
+		    this.name = name;
+		    this.setLocation(x, y);
+		  }
 
-			/**
-			* Thiết lập toạ độ cho City
-			*
-			* @param {Number} - Toạ độ x.
-			* @param {Number} - Toạ độ y.
-			*/
-			setLocation(x, y) {
-				this.x = x;
-				this.y = y;
-			}
+		  /**
+		  * Thiết lập toạ độ cho City
+		  *
+		  * @param {Number} - Toạ độ x.
+		  * @param {Number} - Toạ độ y.
+		  */
+		  setLocation(x, y) {
+		    this.x = x;
+		    this.y = y;
+		  }
 
-			/**
-			* Get toạ độ của City
-			*
-			* @return {Object}
-			*/
-			getLocation() {
-				return {
-					x: this.x,
-					y: this.y
-				};
-			}
+		  /**
+		  * Get toạ độ của City
+		  *
+		  * @return {Object}
+		  */
+		  getLocation() {
+		    return {
+		      x: this.x,
+		      y: this.y
+		    };
+		  }
 
-			/**
-			* Lấy tên của city 
-			*
-			* @return {String}
-			*/
-			getName() {
-				return `City is name ("${this.name}")`;
-			}
+		  /**
+		  * Lấy tên của city 
+		  *
+		  * @return {String}
+		  */
+		  getName() {
+		    return `City is name ("${this.name}")`;
+		  }
 		}
 
 		const _city = new City('Hồ Chí Minh', 100, 200);
@@ -1058,13 +1059,13 @@ Bạn sẽ kiểm tra các trạng thái này như thế nào?
 	Tham Khảo code dưới đây:
 	```javascript
 	class Hero {
-		constructor(heroName) {
-			this.heroName = heroName;
-		}
+	  constructor(heroName) {
+	    this.heroName = heroName;
+	  }
 
-		logName() {
-			console.log(this.heroName);
-		}
+	  logName() {
+	    console.log(this.heroName);
+	  }
 	}
 
 	const batman = new Hero('Batman');
@@ -1078,13 +1079,13 @@ Bạn sẽ kiểm tra các trạng thái này như thế nào?
 	Đoạn mã **setTimeout()** trả về **undefined** là do <a href="https://dmitripavlutin.com/gentle-explanation-of-this-in-javascript/#32-pitfall-separating-method-from-its-object" target="__blank" rel="noopener noreferrer">phương thức bị tách ra khỏi đối tượng</a>. nên **this** lúc này sẽ là window hoặc undefine trong **strict mode**, để khắc phục ta đã dùng **.bind()**. Ngoài ra ta có thể sử dụng **Arrow function** để khắc phục, mã trên sửa lại như sau.
 	```javascript
 	class Hero {
-		constructor(heroName) {
-			this.heroName = heroName;
-		}
+	  constructor(heroName) {
+	    this.heroName = heroName;
+	  }
 
-		logName = () => {
-			console.log(this.heroName);
-		}
+	  logName = () => {
+	    console.log(this.heroName);
+	  }
 	}
 
 	const batman = new Hero('Batman');
@@ -1100,19 +1101,19 @@ Bạn sẽ kiểm tra các trạng thái này như thế nào?
 Ví dụ:
 	```javascript
 	function formalGreeting() {
-		console.log("How are you?");
+	  console.log("How are you?");
 	}
 
 	function casualGreeting() {
-		console.log("What's up?");
+	  console.log("What's up?");
 	}
 
 	function greet(type, greetFormal, greetCasual) {
-		if(type === 'formal') {
-			greetFormal();
-		} else if(type === 'casual') {
-			greetCasual();
-		}
+	  if(type === 'formal') {
+	    greetFormal();
+	  } else if(type === 'casual') {
+	    greetCasual();
+	  }
 	}
 
 	// prints 'What's up?'
@@ -1136,8 +1137,8 @@ Ví dụ:
 	#### Destructing object
 	```javascript
 	const hero = {
-		name: 'Batman',
-		realName: 'Bruce Wayne'
+	  name: 'Batman',
+	  realName: 'Bruce Wayne'
 	};
 
 	const { name, realName } = hero;
@@ -1157,7 +1158,7 @@ Ví dụ:
 Thí dụ bạn có một hàm để tính giá trị discount, giảm ngay 10% cho khách hàng thân thiết.
 	```javascript
 	function discount(price, discount) {
-		return price * discount
+	  return price * discount
 	}
 
 	// Giảm ngay 50 đồng khi khách hàng đã tiêu 500 đồng.
@@ -1176,9 +1177,9 @@ Thí dụ bạn có một hàm để tính giá trị discount, giảm ngay 10% 
 	Như bạn có thể thấy việc truyền tham số **0.10** đang lặp lại, để linh hoạt hơn ta sẽ sử dụng **Curry Function** như sau:
 	```javascript
 	function discount(discount) {
-		return (price) => {
-			return price * discount;
-		}
+	  return (price) => {
+	    return price * discount;
+	  }
 	}
 
 	const tenPercentDiscount = discount(0.1);
@@ -1196,7 +1197,7 @@ Thí dụ bạn có một hàm để tính giá trị discount, giảm ngay 10% 
 	Ví dụ về **Spread**:
 	```javascript
 	function sum(x, y, z) {
-		return x + y + z;
+	  return x + y + z;
 	}
 
 	const numbers = [1, 2, 3];
@@ -1221,13 +1222,13 @@ Thí dụ bạn có một hàm để tính giá trị discount, giảm ngay 10% 
 	##### log.js
 	```javascript
 	module.exports.log = function (msg) { 
-		console.log(msg);
+	  console.log(msg);
 	};
 
 	/* cách viết trên có thể viết như sau
-		exports.log = function (msg) { 
-			console.log(msg);
-		};
+	  exports.log = function (msg) { 
+	    console.log(msg);
+	  };
 	*/
 	```
 
@@ -1241,7 +1242,7 @@ Thí dụ bạn có một hàm để tính giá trị discount, giảm ngay 10% 
 	##### log.js
 	```javascript
 	export function log (msg) { 
-		console.log(msg);
+	  console.log(msg);
 	};
 	```
 
@@ -1281,18 +1282,18 @@ Thí dụ bạn có một hàm để tính giá trị discount, giảm ngay 10% 
 - Tạo một vòng lặp for cho output từ 1 đến 100, trong đó output “fizz” thay cho số chia hết cho 3, “buzz” thay cho số chia hết cho 5 và “fizzbuzz” thay cho số chia hết cho cả 3 và 5.
 	```javascript
 	for(let i = 1; i <= 100; i++) {
-		if (i % 3 === 0 && i % 5 === 0) {
+	  if (i % 3 === 0 && i % 5 === 0) {
 		  console.log("fizzbuzz")
-		}
-		else if(i % 3 === 0) {
+	  }
+	  else if(i % 3 === 0) {
 		  console.log("fizz")
-		}
-		else if (i % 5 === 0) {
+	  }
+	  else if (i % 5 === 0) {
 		  console.log("buzz")
-		}
-		else {
+	  }
+	  else {
 		  console.log(i);
-		}
+	  }
 	}
 	```
 
