@@ -495,9 +495,9 @@
 		"use strict"
 
 		const obj = {
-			method: function() {
-				return this;
-			}
+		  method: function() {
+		    return this;
+		  }
 		};
 
 		console.log(obj.method()); // this của method vẫn sẽ trả về obj
@@ -507,20 +507,20 @@
 		Giá trị của **this** trong một **arrow function** sẽ được kế thừa từ **this** của **function/method**, nơi mà **arrow function** đó được khai báo chứ không còn trả trả về object gần nhất chứa nó nữa.
 		```javascript
 		const obj = {
-			methoddd: function() {
-				console.log(this); // trả về obj
+		  methoddd: function() {
+		    console.log(this); // trả về obj
 
-				const arrowFunc = () => {
-					console.log(this);
-				};
+		    const arrowFunc = () => {
+		      console.log(this);
+		    };
 
-				/*
-					arrowFunc đc khai báo trong phương thức
-					methoddd nên 'this' của arrowFunc sẽ kế thừa
-					'this' của methoddd và trả về obj
-				*/
-				arrowFunc();
-			}
+		    /*
+		      arrowFunc đc khai báo trong phương thức
+		      methoddd nên 'this' của arrowFunc sẽ kế thừa
+		      'this' của methoddd và trả về obj
+		    */
+		    arrowFunc();
+		  }
 		};
 
 		console.log(obj.methoddd());
@@ -528,19 +528,19 @@
 
 		```javascript
 		const arrowFunc = () => {
-			console.log(this); // this của arrowFunc lần này sẽ là window
+		  console.log(this); // this của arrowFunc lần này sẽ là window
 		};
 
 		const obj = {
-			methoddd: function() {
-				console.log(this); // trả về obj
+		  methoddd: function() {
+		    console.log(this); // trả về obj
 
-				/*
-					'this' sẽ trả về object window do arrowFunc không
-					còn được khai báo bên trong methoddd nữa
-				*/
-				arrowFunc();
-			}
+		    /*
+		      'this' sẽ trả về object window do arrowFunc không
+		      còn được khai báo bên trong methoddd nữa
+		    */
+		    arrowFunc();
+		  }
 		};
 
 		console.log(obj.methoddd());
@@ -550,8 +550,8 @@
 		```javascript
 		// dùng arrow function làm constructor function
 		const Human = (name, age) => {
-			this.name = name;
-			this.age = age;
+		  this.name = name;
+		  this.age = age;
 		};
 
 		const man = new Human('Hunq', 20); // Uncaught TypeError: Human is not a constructor
@@ -560,17 +560,17 @@
 
 		```javascript
 		/*
-			dùng arrow function làm method của một object
-			được khởi tạo bằng Object Inintializer
+		  dùng arrow function làm method của một object
+		  được khởi tạo bằng Object Inintializer
 		*/
 		const obj = {
-			method: () => this
+		  method: () => this
 		};
 
 		/*
-			this của method sẽ trả về window
-			vì trên thực tế, method đang được khai báo
-			độc lập (không nằm trong function nào)
+		  this của method sẽ trả về window
+		  vì trên thực tế, method đang được khai báo
+		  độc lập (không nằm trong function nào)
 		*/
 		console.log(obj.method());
 		```
@@ -1209,7 +1209,7 @@ Thí dụ bạn có một hàm để tính giá trị discount, giảm ngay 10% 
 	Ví dụ về **Rest**:
 	```javascript
 	function sum(...args) {
-		return args.reduce((sum, current) => sum + current);
+	  return args.reduce((sum, current) => sum + current);
 	}
 
 	console.log(sum(1, 2, 3)); // 6
