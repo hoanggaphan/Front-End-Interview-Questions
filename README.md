@@ -11,7 +11,7 @@
 6. [Các câu hỏi về Performance](#performance_questions)
 7. [Các câu hỏi về Network](#network_questions)
 8. [Các câu hỏi về việc viết code](#coding_questions)
-9. [Các câu hỏi vui](#usage)
+9. [Các câu hỏi vui](#fun_questions)
 
 <a id="general_questions"></a>
 ### 1. Các câu hỏi chung
