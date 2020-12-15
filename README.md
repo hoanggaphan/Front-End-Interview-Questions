@@ -1,6 +1,6 @@
 # Phỏng vấn Front-end
 
-## Nguồn <a href="https://h5bp.org/Front-end-Developer-Interview-Questions" target="__blank" rel="noopener noreferrer">h5bp.org</a>
+## Nguồn <a href="https://h5bp.org/Front-end-Developer-Interview-Questions" target="_blank" rel="noopener noreferrer">h5bp.org</a>
 
 ## Mục lục
 1. [Các câu hỏi chung](#general_questions)
