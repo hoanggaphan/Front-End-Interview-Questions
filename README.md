@@ -1541,4 +1541,4 @@ Chrome DevTools
 
 ___
 
-<a href="#top">Lên đầu trang</a>
+<a href="#top"><img src="arrow.png" alt="top" />Lên đầu trang</a>
