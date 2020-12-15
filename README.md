@@ -1420,11 +1420,11 @@ Chrome DevTools
 	**Answer:**
 	```javascript
 	function add(a, b) {
-		if(a && b) return a + b;
+	  if(a && b) return a + b;
 
-		return function(c) {
-		  return a + c;
-		}
+	  return function(c) {
+	    return a + c;
+	  }
 	}
 	```
 	Liên quan đến **Closure** nếu gọi hàm theo cách 2.
