@@ -359,16 +359,16 @@
 	- Ví dụ 1:
 		```css
 		#heading {
-			color: orange;
-			color: grey;
+		  color: orange;
+		  color: grey;
 		}
 
 		.heading {
-			color: red;
+		  color: red;
 		}
 
 		h1 {
-			color: blue;
+		  color: blue;
 		}
 		```
 
@@ -377,12 +377,12 @@
 		```css
 		//custom.css
 		h1 {
-			color: red;
+		  color: red;
 		}
 
 		//custom2.css
 		h1 {
-			color: blue;
+		  color: blue;
 		}
 		```
 		Ở ví dụ 2 sẽ apply `color: blue` vì **h1** trong **custom.css** và **h1** trong **custom2.css** có cùng 1 mức độ nhưng `color: blue` khai báo sau `color: red` nên n1 sẽ ghi đè.
@@ -426,9 +426,9 @@
 	- Nếu ta thêm trình lắng nghe sự kiện **onclick** vào thẻ `<li>` để log ra id thì nó vẫn hoạt động tốt. Nhưng trường hợp thẻ `<li>` thường được thêm hoặc xóa khỏi danh sách thì sao? ta lại phải thêm hoặc xóa trình lắng nghe lại sự kiện, giải pháp tốt nhất là sủ dụng **Event delegation** cho thẻ `<ul>`.
 		```javascript
 		document.getElementById("parent-list").addEventListener("click", (e) => {
-			if(e.target && e.target.nodeName == "LI") {
-				console.log(e.target.id);
-			}
+		  if(e.target && e.target.nodeName == "LI") {
+		    console.log(e.target.id);
+		  }
 		});
 		```
 	- Đoạn mã trên kiểm tra thuộc tính đích của đối tượng sự kiện để có được tham chiếu đến nút được nhấp thực sự.
@@ -475,7 +475,7 @@
 		Tất cả mọi thứ trong **Javascript** đều là **object** và **DOM element** cũng không phải ngoại lệ. Chính vì vậy, **This** trong các event của một **DOM element** sẽ trả về chính element chứa nó.
 		```javascript
 		document.getElementById("btn").onclick = function() {
-			console.log(this); // trả về Html Element Object
+		  console.log(this); // trả về Html Element Object
 		};
 		```
 
@@ -485,7 +485,7 @@
 		"use strict"
 
 		function func() {
-			return this;
+		  return this;
 		}
 
 		console.log(func()); // this sẽ trả về undefine
