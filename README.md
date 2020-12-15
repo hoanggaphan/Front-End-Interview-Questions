@@ -1255,11 +1255,11 @@ Thí dụ bạn có một hàm để tính giá trị discount, giảm ngay 10% 
 	**Static** định nghĩa một phương thức tĩnh hoặc thuộc tính tĩnh cho một **class**. Cả phương thức và thuộc tính đều không thể được gọi trên các thể hiện của lớp. Thay vào đó, chúng được gọi trên chính lớp đó. Các phương thức tĩnh thường là các hàm tiện ích, chẳng hạn như các hàm để tạo hoặc sao chép các đối tượng, trong khi các thuộc tính tĩnh hữu ích cho bộ nhớ đệm, cấu hình cố định hoặc bất kỳ dữ liệu nào khác mà bạn không cần sao chép qua các phiên bản.
 	```javascript
 	class ClassWithStaticMethod {
-		static property = 'value';
+	  static property = 'value';
 
-		static method() {
-			return 'call method.';
-		}
+	  static method() {
+	    return 'call method.';
+	  }
 	}
 
 	console.log(ClassWithStaticMethod.property); // 'value'
@@ -1274,7 +1274,7 @@ Thí dụ bạn có một hàm để tính giá trị discount, giảm ngay 10% 
 `duplicate([1,2,3,4,5]); // [1,2,3,4,5,1,2,3,4,5]`
 	```javascript
 	function duplicate(arr) {
-		return [...arr, ...arr];
+	  return [...arr, ...arr];
 	}
 	```
 
@@ -1282,16 +1282,16 @@ Thí dụ bạn có một hàm để tính giá trị discount, giảm ngay 10% 
 	```javascript
 	for(let i = 1; i <= 100; i++) {
 		if (i % 3 === 0 && i % 5 === 0) {
-			console.log("fizzbuzz")
+		  console.log("fizzbuzz")
 		}
 		else if(i % 3 === 0) {
-			console.log("fizz")
+		  console.log("fizz")
 		}
 		else if (i % 5 === 0) {
-			console.log("buzz")
+		  console.log("buzz")
 		}
 		else {
-			console.log(i);
+		  console.log(i);
 		}
 	}
 	```
@@ -1422,7 +1422,7 @@ Chrome DevTools
 		if(a && b) return a + b;
 
 		return function(c) {
-			return a + c;
+		  return a + c;
 		}
 	}
 	```
@@ -1442,8 +1442,8 @@ Chrome DevTools
 	```javascript
 	var foo = "Hello";
 	(function() {
-		var bar = " World";
-		alert(foo + bar);
+	  var bar = " World";
+	  alert(foo + bar);
 	})();
 	alert(foo + bar);
 	```
