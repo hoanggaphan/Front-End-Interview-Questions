@@ -1541,4 +1541,4 @@ Chrome DevTools
 
 ---
 
-<a href="#top"><img src="https://cdn1.bbcode0.com/uploads/2020/12/15/617007fb0b36ded7a123c3f39d2922b4-full.png" alt="top">Lên đầu trang</a>
+<a href="#top"><g-emoji class="g-emoji" alias="arrow_up" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2b06.png">⬆</g-emoji>Lên đầu trang</a>
